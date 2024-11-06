@@ -1,4 +1,4 @@
 # Creating a new book
 
-- new_book = Book(title='Book of Book', author='Simon Ndlovu', published_date='2024-05-24')
-new_book.save()
+book = Book(title="1984", author="George Orwell", publication_year=1949)
+book.save()
