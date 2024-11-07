@@ -1,5 +1,5 @@
 # Updating
 
-"Book.objects.Update" = ["book.title"]
+"Book.objects.Update" = ["book.title" "Nineteen Eighty-Four"]
 
 book.save()
