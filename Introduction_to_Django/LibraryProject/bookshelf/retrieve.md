@@ -1,2 +1,3 @@
 # Retrieving all books
-books = Book.objects.all()
+
+Book.objects.all()

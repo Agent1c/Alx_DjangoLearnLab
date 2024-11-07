@@ -1,5 +1,5 @@
-#Updating
+# Updating
 
-book = Book(UPDATE title WHERE title="Nineteen Eighty-Four", author="George Orwell", publication_year=1949)
+Book(UPDATE title WHERE title="Nineteen Eighty-Four", author="George Orwell", publication_year=1949)
 
 book.save()
