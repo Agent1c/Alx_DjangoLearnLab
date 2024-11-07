@@ -1,3 +1,3 @@
 # Deleting
 
-Book.objects.get(title="1984").delete()
+"book.delete" "from bookshelf.models import Book"
