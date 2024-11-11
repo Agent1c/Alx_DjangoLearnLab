@@ -26,7 +26,9 @@ def book_in_library(library_id):
         return books
     except Library.DoesNotExist:
         return [] #return an empty list if the library doesn't exist
-    
+
+"Author.objects.get(name=author_name)", "objects.filter(author=author)"
+  
 def librarian_for_library(library_id):
     try:
         # Retrieve the Library object
