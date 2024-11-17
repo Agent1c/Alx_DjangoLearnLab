@@ -9,7 +9,7 @@ def book_by_author(author_name):
         # retrieve Author
         author = Author.objects.get(nam=author_name)
         # retrieve book by author
-        books = Book.objects.filter(author_name)
+        books = Book.objects.filter(author=author)
         return books
     except Author.DoesNotExist:
         return []  #return an empty list if the auhpr doesn't exist
