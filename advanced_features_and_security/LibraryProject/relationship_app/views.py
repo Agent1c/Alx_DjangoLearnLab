@@ -40,7 +40,7 @@ def register(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user) # login the user after registration is completed
+            login(request, user) # login user after registration is completed
             return redirect('home')
     else:
         form = UserCreationForm()
@@ -56,7 +56,7 @@ def is_librarian(user):
 def is_member(user):
     return user.userprofile.role == 'Member'
 
-    # Create the Role-Based Views
+# Create the Role-Based Views
 # relationship_app/views.py (continued)
 
 @user_passes_test(is_admin)

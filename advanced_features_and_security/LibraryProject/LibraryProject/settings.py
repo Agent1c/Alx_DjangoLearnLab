@@ -18,6 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 LOGIN_REDIRECT_URL = 'list_books'  # URL you want users redirected to after login
 LOGOUT_REDIRECT_URL = 'login'  # Redirect users to login page after logout
 
+AUTH_USER_MODEL = 'bookshelf.CustomUser' #author user register
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -26,7 +27,7 @@ LOGOUT_REDIRECT_URL = 'login'  # Redirect users to login page after logout
 SECRET_KEY = 'django-insecure-v^gh&)!7c6-nu4bs#o^3dbxgw5t+n3qs^1ze_%!a#53el*2j*9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
