@@ -5,7 +5,7 @@ from django.dispatch import receiver
 
 
 from django.conf import settings
-from django.contrib.auth.models import AbstractUs
+from django.contrib.auth.models import AbstractUser
 # Create your models here.
 
 # Author Model
