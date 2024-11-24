@@ -3,6 +3,7 @@ from . import views
 from .views import BookViewSet
 from rest_framework.routers import DefaultRouter
 from .views import BookViewSet
+from rest_framework.authtoken.views import obtain_auth_token
 
 # Router
 
@@ -16,4 +17,6 @@ urlpatterns = [
     # Include the router URLs for BookViewSet (all CRUD operations)
 
     path('', include(router.urls)),  # This includes all routes registered with the router
+    path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
+    path('api/', include('api.urls')),  
 ]
