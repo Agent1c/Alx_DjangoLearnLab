@@ -14,11 +14,8 @@ class Book(models.Model):
     name = models.CharField(_("name"), max_length=50)
     title = models.CharField(max_length=50)
     publication_year = models.IntegerField("2024-05-24")
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='books')
 
-# class Book(models.Model):
-#     title = models.CharField(max_length=200)
-#     related_books = models.ManyToManyField('self', blank=True)
+    def __str__(self):
+        return f"{self.title} by {self.author} {self.publication_year}"
 
-#     def __str__(self):
-#         return self.title
