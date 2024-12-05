@@ -26,7 +26,7 @@ class AuthorList(generics.ListCreateAPIView):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
     
-    # View to update an author with custom validations and permission checks.    
+# View to update an author with custom validations and permission checks.    
 class AuthorDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
@@ -60,6 +60,7 @@ class BookDetailView(generics.RetrieveAPIView):
     permission_classes = [IsAuthenticatedOrReadOnly] # Read-only access
     
 class BookCreateView(generics.CreateAPIView):
+
     # view to create a new book.
     queryset = Book.objects.all()
     serializer_class = BookSerializer
