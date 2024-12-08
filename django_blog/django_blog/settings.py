@@ -75,12 +75,40 @@ WSGI_APPLICATION = 'django_blog.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
+    'default': {
+
+        #'ENGINE': 'django.db.backends.sqlite3',
+
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'KlktTvAFPpqFPRoqiEFgzcKtjuqokNpM',
+        'HOST': 'postgres.railway.internal',
+        'PORT': '5432',
+
+    }
+
+}
+# DATABASES = {
+
+#     'default': {
+
+#         'ENGINE': 'django.db.backends.postgresql',
+
+#         'NAME': '<PGDATABASE>',
+
+#         'USER': '<PGUSER>',
+
+#         'PASSWORD': '<PGPASSWORD>',
+
+#         'HOST': '<PGHOST>',
+
+#         'PORT': '<PGPORT>',
+
+#     }
+
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -120,9 +148,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # Statics dir path
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+# ]
 
 
 # Default primary key field type
