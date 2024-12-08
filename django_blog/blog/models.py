@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.forms import ModelForm
 
 
 # Create your models here.
@@ -21,4 +22,11 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user')
 
     def __str__(self) -> str:
-        return f'{self.title} {self.content} {self.date_posted}'
+        return f'{self.title} {self.content} {self.published_date}'
+    
+class PostForm(ModelForm):
+    class Meta:
+        model = Post
+        fields = ['title', 'content', 'published_date', 'author']
+    
+    
