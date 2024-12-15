@@ -12,9 +12,9 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
 
     # Blog Post Management Features
-    path('posts/',PostListView.as_view(), name='blogpost-list'),
-    path('posts/<int:pk>/', PostDetailView.as_view(), name='blogpost-detail'),
-    path('posts/new/', PostCreateView.as_view(), name='blogpost-create'),
-    path('posts/<int:pk>/update/', PostUpdateView.as_view(), name='blogpost-update'),
+    path('post/',PostListView.as_view(), name='blogpost-list'),
+    path('post/<int:pk>/', PostDetailView.as_view(), name='blogpost-detail'),
+    path('post/new/', PostCreateView.as_view(), name='blogpost-create'),
+    path('post/<int:pk>/update/', PostUpdateView.as_view(), name='blogpost-update'),
     path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='blogpost-delete'),
 ]
