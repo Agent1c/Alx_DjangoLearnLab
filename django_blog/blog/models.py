@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.forms import ModelForm
 
 
+
 # Create your models here.
 
 
@@ -23,10 +24,4 @@ class Post(models.Model):
 
     def __str__(self) -> str:
         return f'{self.title} {self.content} {self.published_date}'
-    
-class PostForm(ModelForm):
-    class Meta:
-        model = Post
-        fields = ['title', 'content', 'published_date', 'author']
-    
     

@@ -21,6 +21,18 @@
     <div class="content">
         {% block content %}
         <!-- Page-specific content goes here -->
+        <h1>Blog Posts</h1>
+        <a href="{% url 'blogpost-create' %}">Create New Post</a>
+        <ul>
+          {% for post in posts %}
+            <li>
+              <a href="{% url 'blogpost-detail' post.pk %}">{{ post.title }}</a>
+              - <a href="{% url 'blogpost-update' post.pk %}">Edit</a>
+              - <a href="{% url 'blogpost-delete' post.pk %}">Delete</a>
+            </li>
+          {% endfor %}
+        </ul>
+
         {% endblock %}
     </div>
 
@@ -31,3 +43,8 @@
     <script src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>
+
+blogpost_list.html - Display all blog posts.
+blogpost_detail.html - Display a single blog post.
+blogpost_form.html - Form for creating and updating posts.
+blogpost_confirm_delete.html - Confirmation page for deleting a post
