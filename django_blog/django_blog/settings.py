@@ -90,26 +90,8 @@ DATABASES = {
     }
 
 }
-# DATABASES = {
 
-#     'default': {
-
-#         'ENGINE': 'django.db.backends.postgresql',
-
-#         'NAME': '<PGDATABASE>',
-
-#         'USER': '<PGUSER>',
-
-#         'PASSWORD': '<PGPASSWORD>',
-
-#         'HOST': '<PGHOST>',
-
-#         'PORT': '<PGPORT>',
-
-#     }
-
-# }
-
+TAGGIT_CASE_INSENSITIVE = True
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
