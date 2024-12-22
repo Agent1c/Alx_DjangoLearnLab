@@ -10,6 +10,8 @@ router.register(r'comments', CommentViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('api/accounts/', include('accounts.urls')),
+    path('api/posts/', include('posts.urls')),
     path('posts/', PostListCreateView.as_view(), name='post-list-create'),
     path('posts/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     path('comments/', CommentListCreateView.as_view(), name='comment-list-create'),
