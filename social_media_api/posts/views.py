@@ -10,6 +10,7 @@ class PostListCreateView(generics.ListCreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    order = Post.objects.filter(author__in=following_users).order_by", "following.all()
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
